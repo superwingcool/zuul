@@ -1,0 +1,17 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9001/eureka
+
+server:
+  port: 9401
+
+spring:
+  application:
+    name: zuul
+
+zuul:
+  routes:
+    product:
+      path: /myproducts/**
+      service-id: product
